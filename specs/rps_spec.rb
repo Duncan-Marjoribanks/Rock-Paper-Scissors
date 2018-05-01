@@ -4,13 +4,13 @@ require_relative("../models/rps")
 
 class TestRps < MiniTest::Test
 
-def setup
-  game = Rps.new("value1", "value2")
-end
+# def setup()
+#   game = Rps.new("value1", "value2")
+# end
 
-def test_game
-  result = Rps.play("rock", "paper")
-  assert_equal("player 2 wins", result)
+def test_play()
+  result = Rps.play("paper", "rock")
+  assert_equal("player 1 wins", result)
 end
 
 end
