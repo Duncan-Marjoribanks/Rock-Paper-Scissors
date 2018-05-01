@@ -1,11 +1,5 @@
 class Rps
 
-attr_reader :play1, :play2
-
-def initialize(play1, play2)
-@play1 = play1
-@play2 = play2
-end
 
 def self.play(play1, play2)
   if play1 == play2

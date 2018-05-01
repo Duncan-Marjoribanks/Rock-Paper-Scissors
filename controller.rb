@@ -3,11 +3,10 @@ require("sinatra/contrib/all")
 require_relative("./models/rps")
 
 
-get 'rps/:player1/:player2' do
-  rps = Rps.new(
+get '/rps/:player1/:player2' do
+  @game = Rps.play(
     params[:player1],
     params[:player2]
   )
-  @game = rps.play()
   erb (:result)
 end
